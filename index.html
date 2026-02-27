@@ -3,89 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IRP | Iran Revival Project</title>
+    <title>IRP Official | Iran Revival Project</title>
     <style>
-        :root { --gold: #f3ba2f; }
-        
         body {
             margin: 0; padding: 0;
-            background: #000; /* ساده‌ترین و حرفه‌ای‌ترین حالت برای تایید BscScan */
+            /* قرار دادن عکس شما در پس‌زمینه به صورت سراسری */
+            background: url('https://i.postimg.cc/Pr7NKHfM/unnamed-1-removebg-preview.png') no-repeat center center fixed;
+            background-size: cover;
+            background-color: #000;
             color: white; font-family: 'Arial Black', sans-serif;
-            min-height: 100vh; display: flex; align-items: center; justify-content: center;
+            display: flex; justify-content: center; align-items: center; min-height: 100vh;
         }
-
-        .main-card {
-            background: rgba(15, 15, 15, 0.95);
-            border: 2px solid var(--gold);
-            padding: 80px 20px 40px;
-            border-radius: 40px;
-            text-align: center;
-            max-width: 450px; width: 90%;
-            position: relative;
+        /* لایه تیره برای اینکه متن‌ها روی عکس پس‌زمینه خوانا باشند */
+        body::before {
+            content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.85); z-index: 1;
         }
-
-        .logo-container {
-            width: 170px; height: 170px;
-            margin: -165px auto 30px;
-            background: #000;
-            border-radius: 50%;
-            border: 4px solid var(--gold);
-            overflow: hidden; /* برش لبه‌های اضافه */
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 0 30px rgba(243, 186, 47, 0.4);
+        .main-container {
+            position: relative; z-index: 10;
+            width: 90%; max-width: 500px;
+            background: rgba(15, 15, 15, 0.9);
+            border: 2px solid #f3ba2f; border-radius: 40px;
+            padding: 90px 20px 40px; text-align: center;
+            box-shadow: 0 0 40px rgba(0,0,0,1);
         }
-
-        .logo-container img {
-            /* درشت کردن واقعی لوگو بدون افت کیفیت */
-            width: 100%; 
-            height: 100%;
-            object-fit: cover; /* این خط باعث می‌شود عکس کل دایره را پر کند و دیگر ریز نباشد */
+        .logo-wrap {
+            width: 180px; height: 180px;
+            background: #000; border: 4px solid #f3ba2f;
+            border-radius: 50%; margin: -185px auto 30px;
+            overflow: hidden; display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 0 30px rgba(243, 186, 47, 0.5);
         }
-
-        h1 { font-size: 2.4rem; color: var(--gold); margin: 0; font-weight: 900; }
-        
-        .mission { font-size: 1.15rem; line-height: 1.6; margin: 30px 0; color: #fff; }
-        .mission strong { color: var(--gold); display: block; font-size: 1.4rem; margin-bottom: 10px; }
-
-        .contract {
-            background: #000; padding: 15px; border-radius: 12px;
-            border: 1px dashed var(--gold); margin-bottom: 30px;
+        .logo-wrap img {
+            width: 100%; height: 100%;
+            object-fit: cover; /* حفظ همان بزرگی عالی در تصویر آخر شما */
         }
-        .address { font-family: monospace; color: #00ffcc; font-size: 0.8rem; word-break: break-all; }
-
-        .buy-btn {
-            background: var(--gold); color: #000;
-            padding: 20px 0; width: 100%;
+        h1 { color: #f3ba2f; font-size: 2.6rem; margin: 0; letter-spacing: 1px; }
+        .description { font-size: 1.2rem; line-height: 1.6; margin: 35px 0; color: #efefef; }
+        .description strong { color: #f3ba2f; }
+        .contract-box {
+            background: #000; border: 1px dashed #f3ba2f;
+            padding: 15px; border-radius: 12px; margin-bottom: 30px;
+        }
+        .address { font-family: monospace; color: #00ffcc; font-size: 0.85rem; word-break: break-all; }
+        .btn {
+            display: inline-block; background: linear-gradient(135deg, #f3ba2f, #ffaa00);
+            color: #000; padding: 18px 0; width: 100%;
             border-radius: 50px; text-decoration: none;
-            font-weight: 900; font-size: 1.3rem;
-            display: inline-block;
+            font-weight: 900; font-size: 1.3rem; transition: 0.3s;
         }
+        .btn:hover { transform: scale(1.02); box-shadow: 0 0 20px #f3ba2f; }
     </style>
 </head>
 <body>
-
-    <div class="main-card">
-        <div class="logo-container">
+    <div class="main-container">
+        <div class="logo-wrap">
             <img src="https://i.postimg.cc/VvG2Q1KN/unnamed-1-2.png" alt="IRP">
         </div>
-        
         <h1>IRP TOKEN</h1>
-
-        <div class="mission">
-            <strong>HOLD, DON'T TRADE</strong>
+        <div class="description">
+            <strong>HOLD, DON'T TRADE</strong><br><br>
             A tribute to Iran's martyrs and the legacy of the Shah. 
             The next generation legacy project like PEPE & SHIBA.
         </div>
-
-        <div class="contract">
-            <span style="color:var(--gold); font-size: 0.7rem; display:block; margin-bottom:5px;">OFFICIAL SMART CONTRACT</span>
+        <div class="contract-box">
+            <span style="color:#f3ba2f; font-size: 0.7rem; display: block; margin-bottom: 5px;">OFFICIAL SMART CONTRACT</span>
             <div class="address">0xe28f35e98380299539308e6f1642823678096e6d</div>
         </div>
-
-        <a href="https://pancakeswap.finance/swap?outputCurrency=0xe28f35e98380299539308e6f1642823678096e6d" class="buy-btn">
-            BUY IRP NOW
-        </a>
+        <a href="https://pancakeswap.finance/swap?outputCurrency=0xe28f35e98380299539308e6f1642823678096e6d" class="btn">BUY IRP NOW</a>
     </div>
-
 </body>
 </html>
